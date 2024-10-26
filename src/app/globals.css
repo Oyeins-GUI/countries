@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[class="light"] {
+   --nav-bg: hsl(0, 0%, 100%);
+   --background: hsl(0, 0%, 98%);
+   --text: hsl(200, 15%, 8%);
+}
+
+[class="dark"] {
+   --nav-bg: hsl(209, 23%, 22%);
+   --background: hsl(207, 26%, 17%);
+   --text: hsl(0, 0%, 100%);
+}
+
+body {
+   color: var(--text);
+   background: var(--background);
+   font-family: "Nunito Sans", sans-serif, Arial, Helvetica, sans-serif;
+   font-optical-sizing: auto;
+   font-style: normal;
+   font-variation-settings: "wdth" 100, "YTLC" 500;
+}
+
+@layer utilities {
+   .text-balance {
+      text-wrap: balance;
+   }
+}
