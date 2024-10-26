@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import countriesData from "../../../../data.json";
+import { countriesData } from "@/data";
 
 export async function GET(
    req: NextRequest,

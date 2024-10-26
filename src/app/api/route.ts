@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { uppercase } from "@/utils/uppercase";
-import countriesData from "../../../data.json";
+import { countriesData } from "@/data";
 
 export async function GET(req: NextRequest) {
    const filter = uppercase(req.nextUrl.searchParams.get("filter"));
