@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Providers } from "./providers";
+import { ThemeProvider } from "next-themes";
 
 export const metadata: Metadata = {
    title: "Travel With Oyeins - Countries Info",
@@ -14,9 +14,9 @@ export default function RootLayout({
 }>) {
    return (
       <html lang="en" suppressHydrationWarning>
-         <Providers>
+         <ThemeProvider attribute="class">
             <body className="min-h-dvh">{children}</body>
-         </Providers>
+         </ThemeProvider>
       </html>
    );
 }
